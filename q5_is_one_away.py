@@ -22,17 +22,15 @@ def is_one_away(s1, s2):
             print(idx1, idx2)
             if s1[idx1] != s2[idx2]:
                 count += 1
-                idx1 += 1
             else:
-                idx1 += 1
                 idx2 += 1
-
+            idx1 += 1
         if count > 1:
             return False
 
     return True
 
 str2 = 'abcd'
-str1 = 'aeed'
+str1 = 'bcd'
 
 print(is_one_away(str1, str2))
