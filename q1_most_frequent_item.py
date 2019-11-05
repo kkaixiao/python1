@@ -4,7 +4,7 @@ def most_frequent_item(lst):
         return None
 
     mapping_dict = {}
-    max_count, max_item = 0, None
+    max_count, max_item = -1, None
 
     for item in lst:
         if item not in mapping_dict:
