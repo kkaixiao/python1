@@ -4,23 +4,17 @@ def most_frequent_item(lst):
         return None
 
     mapping_dict = {}
+    max_count, max_item = 0, None
 
     for item in lst:
         if item not in mapping_dict:
             mapping_dict[item] = 1
         else:
             mapping_dict[item] += 1
+        if max_count < mapping_dict[item]:
+            max_count = mapping_dict[item]
+            max_item = item
 
-    max_val = 0
-    for k,v in mapping_dict.items():
-        max_val = max(max_val, v)
+    return max_item
 
-    ret_val = -1
-    for k,v in mapping_dict.items():
-        if v == max_val:
-            ret_val = k
-
-
-    print(ret_val)
-
-most_frequent_item([3,3,1,3,2,1])
+print(most_frequent_item([3,1,1,3,2,3]))
